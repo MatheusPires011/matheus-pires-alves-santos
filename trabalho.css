@@ -1,0 +1,73 @@
+body{
+    margin-top: 0px;
+    background-color: rgb(215, 239, 247);
+    text-align: center;
+
+}
+
+.barra{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    background-color: rgb(215, 239, 247);
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+@media (max-width:700px){
+    .barra{
+        grid-template-columns: 1fr;
+    }
+}
+
+.botao{
+    font-family: "Kanit", sans-serif;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+    background-color:rgb(114, 179, 233);
+    border: 3px solid rgb(53, 43, 145);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+
+    min-width: 76px;
+}
+
+.botao:hover {
+    background-color:  rgba(56, 241, 232, 0.918);
+}
+
+.botao:focus{
+    background-color: rgb(53, 43, 145);
+}
+
+.kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h2{
+    margin-bottom: 0px;
+}
+
+.descricaoImg{
+    margin-top: 0px;
+}
+
+img{
+    
+    filter:  blur(1.5px);
+  }
+
+img:hover{
+    filter:  blur(0px);
+  }
