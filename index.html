@@ -14,8 +14,8 @@
     <!-- BARRA COM BOTOES DO TOPO DA TELA -->
     <div class="barra">
         <button class="botao" id="botao1" onclick="sobreMim()">Sobre Mim</button>
-        <button class="botao" id="botao2" onclick="formacao()">FormaÁ„o</button>
-        <button class="botao" id="botao3" onclick="portfolio()">PortfÛlio</button>
+        <button class="botao" id="botao2" onclick="formacao()">Forma√ß√£o</button>
+        <button class="botao" id="botao3" onclick="portfolio()">Portf√≥lio</button>
         <button class="botao" id="botao4" onclick="contato()">Contato</button>
     </div>
 
@@ -30,9 +30,9 @@
     <div id="portfolio"></div>
 
     <script>
-        //exibe as informaÁıes do sobre mim quando o bot„o È pressionado 
+        //exibe as informa√ß√µes do sobre mim quando o bot√£o √© pressionado 
         function sobreMim(){
-            //limpa os elementos de antem„o para que n„o se repliquem na tela
+            //limpa os elementos de antem√£o para que n√£o se repliquem na tela
             let ul = document.getElementById("ulFormacao");
             limpa(ul);
             let p = document.getElementById("pSobreMim");
@@ -53,14 +53,14 @@
 
             //replicando o mesmo processo de cima para o <p>
             let pSobreMim = document.getElementById("pSobreMim");
-            let pSobreMimConteudo = document.createTextNode("Me chamo Matheus Pires Alves Santos tenho 21 anos e busco me aproximar da tecnologia pelo meu trabalho. Meus hobbies incluem: jogar video-games com foco em histÛria, ler e assitir filmes.");
+            let pSobreMimConteudo = document.createTextNode("Me chamo Matheus Pires Alves Santos tenho 21 anos e busco me aproximar da tecnologia pelo meu trabalho. Meus hobbies incluem: jogar video-games com foco em hist√≥ria, ler e assitir filmes.");
             pSobreMim.textContent = pSobreMimConteudo.value;
             pSobreMim.appendChild(pSobreMimConteudo);
         }
 
-        //exibe as informaÁıes da formaÁ„o quando o bot„o È pressionado
+        //exibe as informa√ß√µes da forma√ß√£o quando o bot√£o √© pressionado
         function formacao(){
-            //limpa os elementos de antem„o para que n„o se repliquem na tela
+            //limpa os elementos de antem√£o para que n√£o se repliquem na tela
             let ul = document.getElementById("ulFormacao");
             limpa(ul);
             let p = document.getElementById("pSobreMim");
@@ -72,27 +72,27 @@
             
             //identifica o <h1> pelo id, cria o seu conteudo e o atribui
             let h1Formacao = document.getElementById("titulo");
-            let h1FormacaoConteudo = document.createTextNode("FormaÁ„o");
+            let h1FormacaoConteudo = document.createTextNode("Forma√ß√£o");
             h1Formacao.textContent = h1FormacaoConteudo.value;
             h1Formacao.appendChild(h1FormacaoConteudo);
             
-            //identifica para onde os elementes que ser„o criados ir„o
+            //identifica para onde os elementes que ser√£o criados ir√£o
             let ulFormacao = document.getElementById("ulFormacao");
 
             //cria o <li> e o insere no <ul> anteriormente identificado
             let liFormacao1 = document.createElement("li");
-            liFormacao1.textContent = "TecnÛlogo - An·lise e desenvolvimento de sistemas - Uninter (Cursando)";
+            liFormacao1.textContent = "Tecn√≥logo - An√°lise e desenvolvimento de sistemas - Uninter (Cursando)";
             ulFormacao.appendChild(liFormacao1);
 
             //repete o processo de cima
             let liFormacao2 = document.createElement("li");
-            liFormacao2.textContent = "Ensino mÈdio - E. E. Prof. Paulo Chaves - (Completo)";
+            liFormacao2.textContent = "Ensino m√©dio - E. E. Prof. Paulo Chaves - (Completo)";
             ulFormacao.appendChild(liFormacao2);
         }
 
-        //exibe as informaÁıes do portfolio quando o bot„o È pressionado
+        //exibe as informa√ß√µes do portfolio quando o bot√£o √© pressionado
         function portfolio(){
-            //limpa os elementos de antem„o para que n„o se repliquem na tela
+            //limpa os elementos de antem√£o para que n√£o se repliquem na tela
             let ul = document.getElementById("ulFormacao");
             limpa(ul);
             let p = document.getElementById("pSobreMim");
@@ -104,11 +104,11 @@
             
             //identifica o <h1> pelo id, cria o seu conteudo e o atribui
             let h1Portfolio = document.getElementById("titulo");
-            let h1PortfolioConteudo = document.createTextNode("PortfÛlio");
+            let h1PortfolioConteudo = document.createTextNode("Portf√≥lio");
             h1Portfolio.textContent = h1PortfolioConteudo.value;
             h1Portfolio.appendChild(h1PortfolioConteudo);
 
-            //identifica para onde os elementes que ser„o criados ir„o
+            //identifica para onde os elementes que ser√£o criados ir√£o
             let portfolio = document.getElementById("portfolio");
 
             //cria um <h2> e o insere no <div> anteriormente identificado
@@ -128,18 +128,18 @@
             //identifica o <a>, cria um <img> e insere no <a>
             let a = document.getElementById("img1");
             let imgA = document.createElement("img");
-            imgA.src = "../imagens/camisasfoto.png";
+            imgA.src = "./imagens/camisasfoto.png";
             a.appendChild(imgA);
 
             //cria um <p> e seu conteudo
             let pPortfolio = document.createElement("p");
             pPortfolio.setAttribute("class", "descricaoImg");
-            pPortfolio.textContent = "Permite escolher o modelo da camiseta, quatidade e tipo de entrega. O programa far· toda a conta te dara o valor total do pedido.";
+            pPortfolio.textContent = "Permite escolher o modelo da camiseta, quatidade e tipo de entrega. O programa far√° toda a conta te dara o valor total do pedido.";
             portfolio.appendChild(pPortfolio);
 
             //repete todo o processo anterior para uma nova imagem
             let h2Portfolio2 = document.createElement("h2");
-            h2Portfolio2.textContent = "Sistema de cadastro e consulta de funcion·rios";
+            h2Portfolio2.textContent = "Sistema de cadastro e consulta de funcion√°rios";
             portfolio.appendChild(h2Portfolio2);
 
             let aPortfolio2 = document.createElement("a");
@@ -152,19 +152,19 @@
 
             let a2 = document.getElementById("img2");
             let imgA2 = document.createElement("img");
-            imgA2.src = "../imagens/funcionariosfoto.png";
+            imgA2.src = "./imagens/funcionariosfoto.png";
             a2.appendChild(imgA2);
 
             let pPortfolio2 = document.createElement("p");
             pPortfolio2.setAttribute("class", "descricaoImg");
-            pPortfolio2.textContent = "Cadastre funcion·rios, os consulte e os remova. Os funcionarios ser„o armazenados em uma lista que pode ser consultada de diferentes formas.";
+            pPortfolio2.textContent = "Cadastre funcion√°rios, os consulte e os remova. Os funcionarios ser√£o armazenados em uma lista que pode ser consultada de diferentes formas.";
             portfolio.appendChild(pPortfolio2);
 
         }
 
-        //exibe as informaÁıes de contato quando o bot„o È pressionado
+        //exibe as informa√ß√µes de contato quando o bot√£o √© pressionado
         function contato(){
-            //limpa os elementos de antem„o para que n„o se repliquem na tela
+            //limpa os elementos de antem√£o para que n√£o se repliquem na tela
             let ul = document.getElementById("ulFormacao");
             limpa(ul);
             let p = document.getElementById("pSobreMim");
@@ -180,7 +180,7 @@
             h1Contato.textContent = h1ContatoConteudo.value;
             h1Contato.appendChild(h1ContatoConteudo);
 
-            //identifica para onde os elementes que ser„o criados ir„o
+            //identifica para onde os elementes que ser√£o criados ir√£o
             let formContato = document.getElementById("formContato");
 
             //cria uma <label> com o nome "Nome:"
@@ -189,7 +189,7 @@
             labelNome.textContent = "Nome:";
             formContato.appendChild(labelNome);
 
-            //cria um <input> para a inserÁ„o do nome do usu·rio
+            //cria um <input> para a inser√ß√£o do nome do usu√°rio
             let inputNome = document.createElement("input");
             inputNome.type = "text";
             inputNome.name = "nome";
@@ -208,7 +208,7 @@
             labelEmail.textContent = "Email:";
             formContato.appendChild(labelEmail);
 
-            //cria um <input> para a inserÁ„o do email do usu·rio
+            //cria um <input> para a inser√ß√£o do email do usu√°rio
             let inputEmail = document.createElement("input");
             inputEmail.type = "text";
             inputEmail.name = "email";
@@ -231,7 +231,7 @@
             let br4 = document.createElement("br");
             formContato.appendChild(br4);
 
-            //cria uma <textarea> para a inserÁ„o do email do usu·rio
+            //cria uma <textarea> para a inser√ß√£o do email do usu√°rio
             let inputMensagem = document.createElement("textarea");
             inputMensagem.name = "mensagem";
             inputMensagem.cols = 40;
@@ -246,14 +246,14 @@
             let br6 = document.createElement("br");
             formContato.appendChild(br6);
 
-            //cria um <button> para enviar as infomaÁıes inseridas
+            //cria um <button> para enviar as infoma√ß√µes inseridas
             let botao = document.createElement("button");
             botao.name = "enviar"
             botao.textContent = "Enviar"
             formContato.appendChild(botao)
         }
 
-        //funÁ„o para "limpar" a tela
+        //fun√ß√£o para "limpar" a tela
         function limpa(element){
             element.innerHTML = "";
         }
