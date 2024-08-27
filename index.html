@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+    <link rel="stylesheet" href="trabalho.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BARRA COM BOTOES DO TOPO DA TELA -->
+    <div class="barra">
+        <button class="botao" id="botao1" onclick="sobreMim()">Sobre Mim</button>
+        <button class="botao" id="botao2" onclick="formacao()">Formação</button>
+        <button class="botao" id="botao3" onclick="portfolio()">Portfólio</button>
+        <button class="botao" id="botao4" onclick="contato()">Contato</button>
+    </div>
+
+    <h1 id="titulo"></h1>
+    
+    <p id="pSobreMim"></p>
+
+    <ul id="ulFormacao"></ul>
+
+    <form action="" id="formContato"></form>
+
+    <div id="portfolio"></div>
+
+    <script>
+        //exibe as informações do sobre mim quando o botão é pressionado 
+        function sobreMim(){
+            //limpa os elementos de antemão para que não se repliquem na tela
+            let ul = document.getElementById("ulFormacao");
+            limpa(ul);
+            let p = document.getElementById("pSobreMim");
+            limpa(p);
+            let div = document.getElementById("portfolio");
+            limpa(div);
+            let form = document.getElementById("formContato");
+            limpa(form);
+            
+
+            //identifica o <h1> pelo id e cria o seu conteudo
+            let h1SobreMim = document.getElementById("titulo");
+            let h1SobreMimConteudo = document.createTextNode("Sobre Mim");
+            //atribui o conteudo criado ao <h1> identificado
+            h1SobreMim.textContent = h1SobreMimConteudo.value;
+            h1SobreMim.appendChild(h1SobreMimConteudo);
+
+
+            //replicando o mesmo processo de cima para o <p>
+            let pSobreMim = document.getElementById("pSobreMim");
+            let pSobreMimConteudo = document.createTextNode("Me chamo Matheus Pires Alves Santos tenho 21 anos e busco me aproximar da tecnologia pelo meu trabalho. Meus hobbies incluem: jogar video-games com foco em história, ler e assitir filmes.");
+            pSobreMim.textContent = pSobreMimConteudo.value;
+            pSobreMim.appendChild(pSobreMimConteudo);
+        }
+
+        //exibe as informações da formação quando o botão é pressionado
+        function formacao(){
+            //limpa os elementos de antemão para que não se repliquem na tela
+            let ul = document.getElementById("ulFormacao");
+            limpa(ul);
+            let p = document.getElementById("pSobreMim");
+            limpa(p);
+            let div = document.getElementById("portfolio");
+            limpa(div);
+            let form = document.getElementById("formContato");
+            limpa(form);
+            
+            //identifica o <h1> pelo id, cria o seu conteudo e o atribui
+            let h1Formacao = document.getElementById("titulo");
+            let h1FormacaoConteudo = document.createTextNode("Formação");
+            h1Formacao.textContent = h1FormacaoConteudo.value;
+            h1Formacao.appendChild(h1FormacaoConteudo);
+            
+            //identifica para onde os elementes que serão criados irão
+            let ulFormacao = document.getElementById("ulFormacao");
+
+            //cria o <li> e o insere no <ul> anteriormente identificado
+            let liFormacao1 = document.createElement("li");
+            liFormacao1.textContent = "Tecnólogo - Análise e desenvolvimento de sistemas - Uninter (Cursando)";
+            ulFormacao.appendChild(liFormacao1);
+
+            //repete o processo de cima
+            let liFormacao2 = document.createElement("li");
+            liFormacao2.textContent = "Ensino médio - E. E. Prof. Paulo Chaves - (Completo)";
+            ulFormacao.appendChild(liFormacao2);
+        }
+
+        //exibe as informações do portfolio quando o botão é pressionado
+        function portfolio(){
+            //limpa os elementos de antemão para que não se repliquem na tela
+            let ul = document.getElementById("ulFormacao");
+            limpa(ul);
+            let p = document.getElementById("pSobreMim");
+            limpa(p);
+            let div = document.getElementById("portfolio");
+            limpa(div);
+            let form = document.getElementById("formContato");
+            limpa(form);
+            
+            //identifica o <h1> pelo id, cria o seu conteudo e o atribui
+            let h1Portfolio = document.getElementById("titulo");
+            let h1PortfolioConteudo = document.createTextNode("Portfólio");
+            h1Portfolio.textContent = h1PortfolioConteudo.value;
+            h1Portfolio.appendChild(h1PortfolioConteudo);
+
+            //identifica para onde os elementes que serão criados irão
+            let portfolio = document.getElementById("portfolio");
+
+            //cria um <h2> e o insere no <div> anteriormente identificado
+            let h2Portfolio = document.createElement("h2");
+            h2Portfolio.textContent = "Programa com escolha de modelo e calculo de produtos";
+            portfolio.appendChild(h2Portfolio);
+
+            //cria um <a>, o configura e o insere no <div>
+            let aPortfolio = document.createElement("a");
+            aPortfolio.setAttribute("id", "img1");
+            aPortfolio.href = "https://colab.research.google.com/drive/1V9CnXfN6xEvd1DeuWm3Z4L0Yf257mXwx?usp=sharing";
+            aPortfolio.target = "_blank";
+            aPortfolio.rel = "noopener noreferrer";
+            aPortfolio.class = "imagem";
+            portfolio.appendChild(aPortfolio);
+            
+            //identifica o <a>, cria um <img> e insere no <a>
+            let a = document.getElementById("img1");
+            let imgA = document.createElement("img");
+            imgA.src = "./imagens/camisasfoto.png";
+            a.appendChild(imgA);
+
+            //cria um <p> e seu conteudo
+            let pPortfolio = document.createElement("p");
+            pPortfolio.setAttribute("class", "descricaoImg");
+            pPortfolio.textContent = "Permite escolher o modelo da camiseta, quatidade e tipo de entrega. O programa fará toda a conta te dara o valor total do pedido.";
+            portfolio.appendChild(pPortfolio);
+
+            //repete todo o processo anterior para uma nova imagem
+            let h2Portfolio2 = document.createElement("h2");
+            h2Portfolio2.textContent = "Sistema de cadastro e consulta de funcionários";
+            portfolio.appendChild(h2Portfolio2);
+
+            let aPortfolio2 = document.createElement("a");
+            aPortfolio2.setAttribute("id", "img2");
+            aPortfolio2.href = "https://colab.research.google.com/drive/1LEWz1Zjh68yYSXUh-oxq4iGkYZajc6rM?usp=sharing";
+            aPortfolio2.target = "_blank";
+            aPortfolio2.rel = "noopener noreferrer";
+            aPortfolio2.class = "imagem";
+            portfolio.appendChild(aPortfolio2);
+
+            let a2 = document.getElementById("img2");
+            let imgA2 = document.createElement("img");
+            imgA2.src = "./imagens/funcionariosfoto.png";
+            a2.appendChild(imgA2);
+
+            let pPortfolio2 = document.createElement("p");
+            pPortfolio2.setAttribute("class", "descricaoImg");
+            pPortfolio2.textContent = "Cadastre funcionários, os consulte e os remova. Os funcionarios serão armazenados em uma lista que pode ser consultada de diferentes formas.";
+            portfolio.appendChild(pPortfolio2);
+
+        }
+
+        //exibe as informações de contato quando o botão é pressionado
+        function contato(){
+            //limpa os elementos de antemão para que não se repliquem na tela
+            let ul = document.getElementById("ulFormacao");
+            limpa(ul);
+            let p = document.getElementById("pSobreMim");
+            limpa(p);
+            let div = document.getElementById("portfolio");
+            limpa(div);
+            let form = document.getElementById("formContato");
+            limpa(form);
+            
+            //identifica o <h1> pelo id, cria o seu conteudo e o atribui
+            let h1Contato = document.getElementById("titulo");
+            let h1ContatoConteudo = document.createTextNode("Contato");
+            h1Contato.textContent = h1ContatoConteudo.value;
+            h1Contato.appendChild(h1ContatoConteudo);
+
+            //identifica para onde os elementes que serão criados irão
+            let formContato = document.getElementById("formContato");
+
+            //cria uma <label> com o nome "Nome:"
+            let labelNome = document.createElement("label")
+            labelNome.for = "nome";
+            labelNome.textContent = "Nome:";
+            formContato.appendChild(labelNome);
+
+            //cria um <input> para a inserção do nome do usuário
+            let inputNome = document.createElement("input");
+            inputNome.type = "text";
+            inputNome.name = "nome";
+            inputNome.required = true;
+            formContato.appendChild(inputNome);
+
+            //quebra de linha
+            let br = document.createElement("br");
+            formContato.appendChild(br);
+            let br1 = document.createElement("br");
+            formContato.appendChild(br1);
+
+            //cria uma <label> com o nome "Email:"
+            let labelEmail = document.createElement("label")
+            labelEmail.for = "email";
+            labelEmail.textContent = "Email:";
+            formContato.appendChild(labelEmail);
+
+            //cria um <input> para a inserção do email do usuário
+            let inputEmail = document.createElement("input");
+            inputEmail.type = "text";
+            inputEmail.name = "email";
+            inputEmail.required = true;
+            formContato.appendChild(inputEmail);
+
+            //quebra de linha
+            let br2 = document.createElement("br");
+            formContato.appendChild(br2);
+            let br3 = document.createElement("br");
+            formContato.appendChild(br3);
+
+            //cria uma <label> com o nome "Mensagem:"
+            let labelMensagem = document.createElement("label")
+            labelMensagem.for = "mensagem";
+            labelMensagem.textContent = "Mensagem:";
+            formContato.appendChild(labelMensagem);
+            
+            //quebra de linha
+            let br4 = document.createElement("br");
+            formContato.appendChild(br4);
+
+            //cria uma <textarea> para a inserção do email do usuário
+            let inputMensagem = document.createElement("textarea");
+            inputMensagem.name = "mensagem";
+            inputMensagem.cols = 40;
+            inputMensagem.rows = 5;
+            style="width:200px; height:50px;"
+            inputMensagem.required = true;
+            formContato.appendChild(inputMensagem);
+
+            //quebra de linha
+            let br5 = document.createElement("br");
+            formContato.appendChild(br5);
+            let br6 = document.createElement("br");
+            formContato.appendChild(br6);
+
+            //cria um <button> para enviar as infomações inseridas
+            let botao = document.createElement("button");
+            botao.name = "enviar"
+            botao.textContent = "Enviar"
+            formContato.appendChild(botao)
+        }
+
+        //função para "limpar" a tela
+        function limpa(element){
+            element.innerHTML = "";
+        }
+        
+    </script>
+    
+</body>
+</html>
